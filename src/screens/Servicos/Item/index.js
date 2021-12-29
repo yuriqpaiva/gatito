@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
+import Botao from '../../../components/Botao';
 import CampoInteiro from '../../../components/CampoInteiro';
 import estilos from './estilos';
 
@@ -17,14 +18,18 @@ function Item({ nome, preco, descricao }) {
         <View>
           <View style={estilos.valor}>
             <Text style={estilos.descricao}>Quantidade:</Text>
-            <CampoInteiro valor={quantidade} acao={setQuantidade} />
+            <CampoInteiro
+              valor={quantidade}
+              acao={setQuantidade}
+              estilos={estilos.quantidade}
+            />
           </View>
           <View style={estilos.valor}>
             <Text style={estilos.descricao}>Preço:</Text>
             <Text style={estilos.preco}>0</Text>
           </View>
         </View>
-        <Button title="Adicionar" />
+        <Botao valor="Adicionar" acao={() => {}} />
       </View>
       <View style={estilos.divisor}></View>
     </>
