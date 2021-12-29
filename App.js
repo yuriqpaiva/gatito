@@ -1,13 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import Servicos from './src/screens/Servicos';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Alura</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Servicos />;
 }
 
 const styles = StyleSheet.create({
