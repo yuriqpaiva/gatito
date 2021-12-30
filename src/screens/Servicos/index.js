@@ -26,7 +26,7 @@ const servicos = [
 
 function Servicos() {
   return (
-    <TelaPadrao>
+    <>
       <FlatList
         data={servicos}
         renderItem={({ item }) => {
@@ -35,7 +35,7 @@ function Servicos() {
         keyExtractor={({ id }) => String(id)}
         removeClippedSubviews={false}
       />
-    </TelaPadrao>
+    </>
   );
 }
 

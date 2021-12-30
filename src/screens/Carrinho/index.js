@@ -36,17 +36,15 @@ function Carrinho() {
   }, 0);
 
   return (
-    <TelaPadrao>
+    <>
       <StatusCarrinho total={total} />
       <FlatList
         data={servicos}
-        renderItem={({ item }) => {
-          return <Item {...item} />;
-        }}
+        renderItem={({ item }) => <Item {...item} />}
         keyExtractor={({ id }) => String(id)}
         removeClippedSubviews={false}
       />
-    </TelaPadrao>
+    </>
   );
 }
 
