@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import Item from './Item';
 import TelaPadrao from '../../components/TelaPadrao';
+import StatusCarrinho from '../../components/StatusCarrinho';
 
 const servicos = [
   {
@@ -28,8 +29,15 @@ const servicos = [
 ];
 
 function Carrinho() {
+  // Utilizando reduce para percorrer cada objeto do array,
+  // somando o preço pela quantidade, retornando o total
+  const total = servicos.reduce((soma, { preco, quantidade }) => {
+    return soma + preco * quantidade;
+  }, 0);
+
   return (
     <TelaPadrao>
+      <StatusCarrinho total={total} />
       <FlatList
         data={servicos}
         renderItem={({ item }) => {
