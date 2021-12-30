@@ -20,6 +20,7 @@ function Rotas() {
           tabBarStyle: {
             height: 70,
           },
+          headerShown: false,
           tabBarLabelStyle: {
             flex: 1,
             width: '100%',
