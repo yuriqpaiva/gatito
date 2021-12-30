@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  // Define uma proporção para os elementos
   preencher: {
     flex: 1,
   },
