@@ -31,7 +31,6 @@ function Item({ nome, preco, descricao, quantidade: quantidadeInicial }) {
           }).format(preco)}
         </Text>
       </View>
-      {/* Se expandir for true, ele vai passar para a próxima condição */}
       <View style={estilos.carrinho}>
         <View>
           <View style={estilos.valor}>
